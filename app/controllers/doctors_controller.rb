@@ -1,6 +1,7 @@
 class DoctorsController < ApplicationController
     def show
-        @doctor.find(params[:id])
+        @doctor= Doctor.find(params[:id])
+        render '/doctor/show'
     end
 
     def index
